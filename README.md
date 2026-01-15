@@ -7,6 +7,19 @@ This project uses
 - the [React Native TV fork](https://github.com/react-native-tvos/react-native-tvos), which supports both phone (Android and iOS) and TV (Android TV and Apple TV) targets
 - the [React Native TV config plugin](https://github.com/react-native-tvos/config-tv/tree/main/packages/config-tv) to allow Expo prebuild to modify the project's native files for TV builds
 
+## How it was created
+
+Expo tv project, see https://docs.expo.dev/guides/building-for-tv/
+
+`npx create-expo-app MyTVProject -e with-tv`
+
+Alternatively, it could also be configured with expo file router with
+
+`npx create-expo-app MyTVProject -e with-router-tv`
+
+Added linting/prettier config following guide
+https://docs.expo.dev/guides/using-eslint/
+
 ## 🚀 How to use
 
 ```sh
@@ -15,16 +28,7 @@ yarn prebuild:tv # Executes clean Expo prebuild with TV modifications
 yarn ios # Build and run for Apple TV
 yarn android # Build for Android TV
 yarn web # Run the project on web from localhost
-```
-
-- For mobile development:
-
-```sh
-yarn
-yarn prebuild # Executes Expo prebuild with no TV modifications
-yarn ios # Build and run for iOS
-yarn android # Build for Android mobile
-yarn web # Run the project on web from localhost
+yarn format # To run prettier against all project files
 ```
 
 > **_NOTE:_**
